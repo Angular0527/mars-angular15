@@ -1,6 +1,6 @@
 console.log("The server is running...")
 
-import express from "express"
+import express, { Request, Response, NextFunction } from "express"
 import serveIndex from "serve-index"
 import api from "./api"
 
@@ -9,10 +9,12 @@ const port = 3000
 
 const publicDir = "."
 
-app.use((req, res, next) => {
+const logger = (req: Request, res: Response, next: NextFunction) => {
   console.log(req.method, req.path)
   next()
-})
+}
+
+app.use(logger)
 
 app.use("/api", api)
 
