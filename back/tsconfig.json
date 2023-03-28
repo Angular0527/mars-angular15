@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "target": "ESNext",
+    "moduleResolution": "node",
+    "module": "CommonJS",
+    "strict": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
+}

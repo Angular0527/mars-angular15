@@ -1,7 +1,8 @@
 console.log("The server is running...")
 
-const express = require("express")
-const serveIndex = require("serve-index")
+import express from "express"
+import serveIndex from "serve-index"
+import api from "./api"
 
 const app = express()
 const port = 3000
@@ -12,6 +13,8 @@ app.use((req, res, next) => {
   console.log(req.method, req.path)
   next()
 })
+
+app.use("/api", api)
 
 app.use(express.static(publicDir))
 app.use(serveIndex(publicDir, { icons: true }))
