@@ -1,5 +1,17 @@
 # Front
 
+## DOC
+
+### Artefacts
+
+- Modules (@NgModules)
+- Composant (@Component)
+- Directive (@Directive)
+- Pipe (@Pipe)
+- Service (@Injectable)
+
+## DOC FROM NG
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.4.
 
 ## Development server
